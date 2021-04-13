@@ -72,8 +72,8 @@ pipeline{
                    bat "docker login -u 1062176 -p ${dockerHubPWD}"
 
                 }
-                bat "docker commit cisample_app_1 1062176/todo-app:v${env.BUILD_ID}"
-                bat "docker push 1062176/todo-app:v${env.BUILD_ID}"
+                bat "docker tag ToDO_app 1062176/todo-app:latest"
+                bat "docker push 1062176/todo-app:latest"
 
             }
         }
