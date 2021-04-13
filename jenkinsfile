@@ -72,7 +72,7 @@ pipeline{
                    bat "docker login -u 1062176 -p ${dockerHubPWD}"
 
                 }
-                bat "docker tag ToDO_app 1062176/todo-app:latest"
+                bat "docker tag todo_app 1062176/todo-app:latest"
                 bat "docker push 1062176/todo-app:latest"
 
             }
