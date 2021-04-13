@@ -70,8 +70,8 @@ pipeline{
         stage('Pushing images to docker hub'){
             steps{
             withCredentials([string(credentialsId: 'dockerHubPWD', variable: 'dockerHubPWD')]) {
-    // some block
-}
+            // some block
+
                 
 
              
@@ -108,3 +108,4 @@ pipeline{
 
     }
 
+}
