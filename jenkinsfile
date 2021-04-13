@@ -4,7 +4,7 @@ pipeline{
        maven 'maven'
        jdk 'jdk'
    }
-   
+   stages{
         stage('Maven package'){
             steps{
                 sh 'mvn -f app/pom.xml package'
@@ -101,4 +101,4 @@ pipeline{
     
 
     }
-
+}
