@@ -37,7 +37,7 @@ pipeline{
         stage('download artifact'){
             steps{
                  rtDownload (
-                 serverId: "ARTIFACTORY-SERVER",
+                 serverId: "ARTIFACTORY_SERVER",
                 spec:"""{
                      "files": [
                                 {
