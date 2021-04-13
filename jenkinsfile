@@ -79,9 +79,9 @@ pipeline{
         }
         stage('deploying it to kubernetes'){
             steps{
-                bat 'chmod +x change-tag.sh'
-                bat """./change-tag.sh v${env.BUILD_ID}"""
-                bat 'cat k8s/api-deployment.yaml'
+               // bat 'chmod +x change-tag.sh'
+               // bat """./change-tag.sh v${env.BUILD_ID}"""
+               // bat 'cat k8s/api-deployment.yaml'
                 withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'kube-azure', namespace: '', serverUrl: 'https://knowing-hermit-k8s-acb538fe.hcp.westus2.azmk8s.io') {
                                 // some block
                     bat 'kubectl apply -f k8s/database-deployment.yaml'
